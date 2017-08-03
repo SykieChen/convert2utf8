@@ -25,6 +25,6 @@ if __name__ == '__main__':
 		if(detected_code['encoding']=="UTF-8-SIG" or detected_code['encoding']=="None"):continue
 		if(detected_code['confidence']>0.8):
 			utf8content = content.decode(detected_code['encoding'], 'ignore')
-			f = open(t, 'w', encoding='utf-8-sig')
+			f = open(t, 'w', encoding='utf-8-sig',newline='')
 			f.write(utf8content)
 			f.close()
